@@ -138,7 +138,8 @@ mongoose.connect(mongoURI, {
   useUnifiedTopology: true
 }).then(() => {
   console.log('Connected to MongoDB Atlas');
-  app.listen(PORT, () => console.log(`Server Started at PORT ${PORT}`));
 }).catch(error => {
   console.error('Error connecting to MongoDB Atlas:', error);
 });
+
+app.listen(PORT, () => console.log(`Server Started at PORT ${PORT}`));
